@@ -1,11 +1,11 @@
 class TopicsController < ApplicationController
-  def index
-    @topic = Topic.all
-  end
+ def index
+   @topics = Topic.all
+ end
   
-  def new
+ def new
     @topic = Topic.new
-  end
+ end
   
   def create
     topic = current_user.topics.new(topic_params)
